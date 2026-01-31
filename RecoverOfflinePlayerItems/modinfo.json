@@ -1,0 +1,14 @@
+{
+    "$schema": "https://moddbcdn.vintagestory.at/schema/modinfo.latest.json",
+    "type": "Code",
+    "modid": "recoverofflineplayeritems",
+    "name": "RecoverOfflinePlayerItems",
+    "authors": [
+        "501warhead"
+    ],
+    "description": "Someone log off with your items? Recover them!",
+    "version": "1.0.0",
+    "dependencies": {
+        "game": "1.21.4"
+    }
+}

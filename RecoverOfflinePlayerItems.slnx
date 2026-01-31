@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RecoverOfflinePlayerItems/RecoverOfflinePlayerItems.csproj" />
+  <Project Path="ZZCakeBuild/CakeBuild.csproj" />
+</Solution>
