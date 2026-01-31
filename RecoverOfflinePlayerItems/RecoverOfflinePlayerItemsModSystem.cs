@@ -17,23 +17,17 @@ public class RecoverOfflinePlayerItemsModSystem : ModSystem
 {
 
     private ICoreServerAPI _sapi = null!;
-    private int iteration = 0;
-
-    // Called on server and client
-    // Useful for registering block/entity classes on both sides
     public override void Start(ICoreAPI api)
     {
     }
 
 
-    // Reflectively collect arrays of ItemSlot from an inventory manager instance
     private List<ItemSlot[]> GetAllItemSlotArrays(object invManager)
     {
         var results = new List<ItemSlot[]>();
         if (invManager == null) return results;
 
         var type = invManager.GetType();
-        // Look for fields
         foreach (var field in type.GetFields(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic))
         {
             if (field.FieldType == typeof(ItemSlot[]))
